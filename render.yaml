@@ -1,1 +1,16 @@
+services:
+  - type: web
+    name: my-node-app
+    env: node
+    plan: free
+    branch: main
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      # Add more environment variables below as needed
+      # - key: API_KEY
+      #   value: your_api_key
 
